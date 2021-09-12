@@ -21,7 +21,7 @@ app.get('/api', (req, res) => {
 });
 
 app.get('/api/exercises', (req, res) => {
-	res.send(JSON.stringify({length: Object.keys(exercises).length }));
+	res.send(exercises);
 });
 
 app.get('/api/exercises/:id', (req, res) => {
