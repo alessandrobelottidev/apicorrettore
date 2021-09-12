@@ -5,6 +5,9 @@ const handleId = require('./handleId.js');
 
 const app = express();
 
+app.get('/', (req, res) => {
+	res.send("Index");
+});
 
 app.get('/exercises/:id', (req, res) => {
 	const id = req.params.id;
