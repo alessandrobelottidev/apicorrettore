@@ -2,8 +2,8 @@ const express = require('express');
 const exercises = require('./exercises.json');
 const handleId = require('./handleId.js');
 
-
 const app = express();
+const port = 3000;
 
 app.get('/', (req, res) => {
 	res.send("Index");
@@ -18,10 +18,9 @@ app.get('/exercises/:id', (req, res) => {
 		res.status(406)
   	res.render('error', { error: 'There\'s an error' })
 	}
-
 });
 
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || port, () => {
   console.log('server started');
 });
