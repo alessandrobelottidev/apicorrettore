@@ -16,6 +16,23 @@
 			"suggestion-1":"",
 			"suggestion-2":"",
 			"suggestion-3":""
+    },
+	  {
+      "nome":"Prodotto di due numeri interi",
+			"descrizione":"Questa è la descrizione dell'esercizio",
+			"punti":"120",
+
+			"expected-input":"int, int",
+			"expected-output":"int",
+
+			"template-cpp":"null",
+			"compiler-js":"",
+
+			"test-cases": "5",
+			
+			"suggestion-1":"",
+			"suggestion-2":"",
+			"suggestion-3":""
     }
   ]
 }
