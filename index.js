@@ -10,13 +10,21 @@ app.use((req, res, next) => {
   res.append('Access-Control-Allow-Headers', 'Content-Type');
   res.set('Access-Control-Expose-Headers', '*')
   next();
-})
+});
 
 app.get('/', (req, res) => {
 	res.send("Index");
 });
 
-app.get('/exercises/:id', (req, res) => {
+app.get('/api', (req, res) => {
+	res.send("API Correttore");
+});
+
+app.get('/api/exercises', (req, res) => {
+	res.send(JSON.stringify({length: Object.keys(exercises).length }));
+});
+
+app.get('/api/exercises/:id', (req, res) => {
 	const id = req.params.id;
 
 	if ( handleId.isValid(exercises, id) ) {
